@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px
+        }
+        div#result {
+            font: normal 20pt Arial;
+        }
+        div#result {
+            margin-top: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="button" value="Somar" onclick="sumNumbers()">
+    <div id="result">
+        Resultado
+    </div>
+
+    <script>
+        function sumNumbers(){
+            var num1_input = document.querySelector('input#num1')
+            var num2_input = document.querySelector('input#num2')
+            var result_div = document.querySelector('div#result')
+            var num1 = Number(num1_input.value)
+            var num2 = Number(num2_input.value)
+            var sum = num1 + num2
+
+            result_div.innerHTML = `Resultado: <strong>${sum}<strong>`
+        }
+    </script>
+
+</body>
+</html>

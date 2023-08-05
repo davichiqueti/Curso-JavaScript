@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com Doms</title>
+    <style>
+        body {
+            background-color: rgb(251, 251, 251);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos Dom</h1>
+    <p class="p">Aprendendo a usar o <strong>DOM</strong> em Java Script</p>
+    <p id="p2">Clique Aqui</p>
+    <script>
+
+        var h1 = document.getElementsByTagName('h1')[0]
+        var p1 = document.getElementsByClassName('p')[0]
+        var p2 = document.querySelector('p#p2')
+
+        h1.style.color = 'blue'
+        p1.style.color = 'red'
+        p2.style.color = 'turquoise'
+
+    </script>
+</body>
+</html>

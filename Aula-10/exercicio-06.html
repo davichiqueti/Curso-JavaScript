@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Clique Aqui
+    </div>
+    
+    <script>
+
+        var div_area = window.document.querySelector('div#area')
+        div_area.addEventListener('mouseenter', mouseEnterArea)
+        div_area.addEventListener('mouseout', mouseExitArea)
+        div_area.addEventListener('click', mouseClickArea)
+
+        function mouseEnterArea(){
+            div_area.style.background = 'grey'
+        }
+        function mouseExitArea(){
+            div_area.style.background = 'black'
+        }
+        function mouseClickArea(){
+            div_area.style.background = 'lightgrey'
+            div_area.innerText = 'Clicou'
+        }
+
+    </script>
+</body>
+</html>
