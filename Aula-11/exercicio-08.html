@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de Multas Detran</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+        input {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do Carro: <input type="number" name="vel_input" id="vel_input"> Km/h
+    <input type="button" value='Verificar' name='check_button' id="check_button" onclick='checkVelocity()'>
+    <div id='result_div'></div>
+
+    <script>
+        function checkVelocity(){
+            var vel_input = document.querySelector('input#vel_input')
+            vel_input = Number(vel_input.value)
+            var result_div = document.querySelector('div#result_div')
+            
+            if (vel_input > 80){
+                result_div.innerHTML = '<p>Velocidade superior a 80 Km/H. Você foi multado!<p>'
+            } else {
+                result_div.innerHTML = '<p>Você está dentro do limite de velocidade<p>'
+            }
+        }
+    </script>
+
+</body>
+</html>

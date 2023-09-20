@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificando Nacionalidade</title>
+    <style>
+        body {
+            background-color: #DBE4EE;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: #3e7cb1;
+        }
+        input {
+            font: normal 20pt Arial;
+        }
+        div {
+            color: #81a4cd
+        }
+    </style>
+</head>
+<body>
+    <h1> Verificando Nacionalidade </h1>
+    <p> 
+        Digite seu país de origem:
+        <input type="text" name="country_name" id="country_name">
+        <input type="button" value="Verificar" name="check_button" id="check_button" onclick="checkNationality()">
+    </p>
+    <div name="result" id="result"></div>
+
+    <script>
+        function checkNationality(){
+            var country_name = document.querySelector('input#country_name').value.toLowerCase()
+            var result = document.querySelector('div#result')
+
+            if (country_name === 'brasil') {
+                result.innerHTML = `<p>Você é brasileiro!<p>`
+            } else {
+                result.innerHTML = `<p>Você é estrangeiro!<p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
