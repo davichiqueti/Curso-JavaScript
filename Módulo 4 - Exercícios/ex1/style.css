@@ -1,6 +1,6 @@
 body {
     background: rgb(59, 143, 244);
-    font: normal 15pt Arial;
+    font: normal 15pt Lucida;
 }
 
 header {
@@ -17,8 +17,14 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.393);
 }
 
-image{
-    margin: auto;
+div#message {
+    text-align: center;
+    font-size: 16pt;
+    padding: 20px;
+}
+
+div#image {
+    text-align: center;
 }
 
 footer {
